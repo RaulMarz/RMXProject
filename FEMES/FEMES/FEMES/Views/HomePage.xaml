@@ -3,10 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FEMES.Views.HomePage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Inicial"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <Label Text="Inicial" HorizontalOptions="CenterAndExpand" />
+
+            <Button Text="Emergencias" x:Name="btnEmergency" Clicked="btnEmergency_ClickedAsync" HorizontalOptions="CenterAndExpand"></Button>
+            <Button Text="Mapa de Emergencias" x:Name="btnEmergencyMap" Clicked="btnEmergencyMap_ClickedAsync" HorizontalOptions="CenterAndExpand"></Button>
+            <Button Text="Estaciones" x:Name="btnStations" Clicked="btnStations_ClickedAsync" HorizontalOptions="CenterAndExpand"></Button>
+            <Button Text="Nosotros" x:Name="btnInfo" Clicked="btnInfo_ClickedAsync" HorizontalOptions="CenterAndExpand"></Button>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

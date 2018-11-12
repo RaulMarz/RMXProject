@@ -9,12 +9,32 @@ using Xamarin.Forms.Xaml;
 
 namespace FEMES.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class HomePage : ContentPage
-	{
-		public HomePage ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class HomePage : ContentPage
+    {
+        public HomePage()
+        {
+            InitializeComponent();
+        }
+
+        private async Task btnEmergency_ClickedAsync(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Views.Emergency.EmergencyPage());
+        }
+
+        private async Task btnEmergencyMap_ClickedAsync(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Views.Emergency.EmergencyMapPage());
+        }
+
+        private async Task btnStations_ClickedAsync(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Views.Stations.StationsPage());
+        }
+
+        private async Task btnInfo_ClickedAsync(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new Views.Info.InfoPage());
+        }
+    }
 }

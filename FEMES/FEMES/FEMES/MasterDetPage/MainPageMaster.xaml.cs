@@ -35,7 +35,8 @@ namespace FEMES.MasterDetPage
                 {
                     new MainPageMenuItem { Id = 0, Title = "Inicio", TargetType = typeof(Views.HomePage) },
                     new MainPageMenuItem { Id = 1, Title = "Perfil", TargetType = typeof(Views.ProfilePage) },
-                
+                    new MainPageMenuItem { Id = 2, Title = "Acerca de", TargetType = typeof(Views.AboutPage) },
+
                 });
             }
             

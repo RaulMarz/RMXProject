@@ -11,7 +11,17 @@ namespace FEMES
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+
+            // TODO Check for user info on the database
+            bool userRegistered = true;
+
+            if (userRegistered){
+                MainPage = new MasterDetPage.MainPage();
+            }
+            else {
+                MainPage = new Views.RegisterPage();
+            }
+            
         }
 
         protected override void OnStart()

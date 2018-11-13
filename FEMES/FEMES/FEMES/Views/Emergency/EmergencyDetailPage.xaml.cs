@@ -12,9 +12,12 @@ namespace FEMES.Views.Emergency
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class EmergencyDetailPage : ContentPage
 	{
-		public EmergencyDetailPage ()
+		public EmergencyDetailPage (string ID = "0" )
 		{
-			InitializeComponent ();
-		}
-	}
+            InitializeComponent ();
+
+            lblDetail.Text = "Detalle para emergencia: " + ID;
+
+        }
+    }
 }

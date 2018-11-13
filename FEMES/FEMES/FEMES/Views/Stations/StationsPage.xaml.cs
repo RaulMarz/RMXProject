@@ -15,7 +15,10 @@ namespace FEMES.Views.Stations
 		public StationsPage ()
 		{
 			InitializeComponent ();
-		}
+
+            var Repository = new Data.Repositories.StationRepository();
+            var stations = Repository.GetStationAsync().Result;
+        }
         private async Task btnDetail_ClickedAsync(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new Views.Stations.StationsDetailPage());

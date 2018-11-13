@@ -5,8 +5,14 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Perfil"
-                VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+
+            <Entry x:Name="txtName" Text="" Keyboard="Default"/>
+            <Entry x:Name="txtGender" Text="" Keyboard="Default"/>
+            <Entry x:Name="txtRH" Text="" Keyboard="Default"/>
+
+            <Button Text="Actualizar" Clicked="btnUpdateUserInfo_ClickedAsync"></Button>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

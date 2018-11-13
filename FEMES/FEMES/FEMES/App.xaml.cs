@@ -11,17 +11,21 @@ namespace FEMES
         {
             InitializeComponent();
 
-
-            // TODO Check for user info on the database
-            bool userRegistered = true;
-
-            if (userRegistered){
+            if (checkForUserInfoAsync())
+            {
                 MainPage = new MasterDetPage.MainPage();
             }
-            else {
+            else
+            {
                 MainPage = new Views.RegisterPage();
             }
-            
+
+        }
+
+        public bool checkForUserInfoAsync() {
+            var Repository = new Data.Repositories.UserInfoRepository();
+            var userInfo = Repository.GetUserInfoAsync();
+            return userInfo.Count > 0;
         }
 
         protected override void OnStart()

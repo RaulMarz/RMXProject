@@ -4,9 +4,18 @@
              x:Class="FEMES.Views.RegisterPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Registro"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Registro" HorizontalOptions="CenterAndExpand" />
+
+            <!--<Entry x:Name="txtName" Placeholder="Nombre" Keyboard="Default"/>
+            <Entry x:Name="txtGender" Placeholder="Género" Keyboard="Default"/>
+            <Entry x:Name="txtRH" Placeholder="RH" Keyboard="Default"/>-->
+
+            <Entry x:Name="txtName" Text="Nombre" Keyboard="Default"/>
+            <Entry x:Name="txtGender" Text="Masculino" Keyboard="Default"/>
+            <Entry x:Name="txtRH" Text="O+" Keyboard="Default"/>
+
+            <Button Text="Guardar" Clicked="btnSaveUserInfo_ClickedAsync"></Button>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

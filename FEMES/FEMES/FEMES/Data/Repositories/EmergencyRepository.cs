@@ -18,12 +18,15 @@ namespace FEMES.Data.Repositories
             Database = new SQLiteAsyncConnection(DbFilePath);
             Database.CreateTableAsync<Entities.Emergency>().Wait();
 
+            //h ttps://www.flaticon.com/icon-packs/firefighter?style_id=15
+            //h ttps://www.flaticon.com/packs/emergency-services-9
 
             var emergency1 = new Data.Entities.Emergency
             {
                 ID = 1,
-                Type = "1",
-                Description = "1",
+                Type = "Médico",
+                LogoSource="ambulance.png",
+                Description = "Trauma por accidente vehicular",
                 Lat = "1",
                 Lng = "1"
             };
@@ -31,24 +34,27 @@ namespace FEMES.Data.Repositories
             var emergency2 = new Data.Entities.Emergency
             {
                 ID = 2,
-                Type = "2",
-                Description = "2",
+                Type = "Incendio",
+                Description = "Incendio forestal",
+                LogoSource = "fire.png",
                 Lat = "2",
                 Lng = "2"
             };
             var emergency3 = new Data.Entities.Emergency
             {
                 ID = 3,
-                Type = "3",
-                Description = "3",
+                Type = "Rescate",
+                Description = "Persona atrapada",
+                LogoSource = "ax.png",
                 Lat = "3",
                 Lng = "3"
             };
             var emergency4 = new Data.Entities.Emergency
             {
                 ID = 4,
-                Type = "4",
-                Description = "4",
+                Type = "Administrativo",
+                Description = "Presencia en concierto",
+                LogoSource = "form.png",
                 Lat = "4",
                 Lng = "4"
             };
@@ -56,8 +62,9 @@ namespace FEMES.Data.Repositories
             var emergency5 = new Data.Entities.Emergency
             {
                 ID = 5,
-                Type = "5",
-                Description = "5",
+                Type = "Sustancias",
+                Description = "Fuga de gas",
+                LogoSource = "Chemical.png",
                 Lat = "5",
                 Lng = "5"
             };

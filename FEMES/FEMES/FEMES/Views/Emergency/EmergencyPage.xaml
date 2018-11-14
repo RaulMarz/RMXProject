@@ -9,16 +9,17 @@
                 HorizontalOptions="CenterAndExpand" />
 
             <!--https://www.c-sharpcorner.com/article/practical-guide-for-listview-cells-in-xamarin-forms/-->
-            <ListView x:Name="lstEmergency" HasUnevenRows="True" SelectionMode="Single" ItemSelected="lstEmergency_ItemSelectedAsync">
+            <!--HasUnevenRows="True"-->
+            <ListView x:Name="lstEmergency" SelectionMode="Single" ItemSelected="lstEmergency_ItemSelectedAsync">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                                <Image Source="{Binding LogoSource}" HeightRequest="30" WidthRequest="50" HorizontalOptions="Start"></Image>
                                 <StackLayout Orientation="Vertical">
-                                    <Label Text="{Binding ID}" Font="18"></Label>
+                                    <Label Text="{Binding Description}" Font="18"></Label>
                                     <Label Text="{Binding Type}" TextColor="Gray"></Label>
                                 </StackLayout>
-                                <!--<Image Source="{Binding imgsource}" HeightRequest="30" WidthRequest="50" HorizontalOptions="EndAndExpand"></Image>-->
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

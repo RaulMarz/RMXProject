@@ -16,6 +16,8 @@ namespace FEMES.Views.Emergency
 		{
             InitializeComponent ();
 
+            contentPageEmergencyDetail.Title = "Emergencia No. " + ID;
+
             lblDetail.Text = "Detalle para emergencia: " + ID;
 
         }

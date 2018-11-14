@@ -1,15 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FEMES.Views.HomePage">
+             x:Class="FEMES.Views.HomePage"
+             BackgroundColor="DarkRed">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="CenterAndExpand">
-            <Label Text="Inicial" HorizontalOptions="CenterAndExpand" />
+        <StackLayout HorizontalOptions="FillAndExpand">
 
-            <Button Text="Emergencias" x:Name="btnEmergency" Clicked="btnEmergency_ClickedAsync" HorizontalOptions="CenterAndExpand"></Button>
-            <Button Text="Mapa de Emergencias" x:Name="btnEmergencyMap" Clicked="btnEmergencyMap_ClickedAsync" HorizontalOptions="CenterAndExpand"></Button>
-            <Button Text="Estaciones" x:Name="btnStations" Clicked="btnStations_ClickedAsync" HorizontalOptions="CenterAndExpand"></Button>
-            <Button Text="Nosotros" x:Name="btnInfo" Clicked="btnInfo_ClickedAsync" HorizontalOptions="CenterAndExpand"></Button>
+
+            <StackLayout.Resources>
+                <Style x:Key="btnHome" TargetType="Button">
+                    <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                    <Setter Property="BackgroundColor" Value="Transparent" />
+                    <Setter Property="BorderColor" Value="Black" />
+                    <Setter Property="BorderWidth" Value="1" />
+                    <Setter Property="BorderRadius" Value="10" />
+                    <Setter Property="Margin" Value="5,5,5,5" />
+                    <Setter Property="FontAttributes" Value="Bold" />
+                </Style>
+            </StackLayout.Resources>
+
+            <Image Source="CBVB.png" Aspect="AspectFill" HeightRequest="180" WidthRequest="180" HorizontalOptions="Center" Margin="0,50,0,50"></Image>
+            
+            <Button Text="Emergencias" x:Name="btnEmergency" Clicked="btnEmergency_ClickedAsync" Style="{StaticResource btnHome}"></Button>
+            <Button Text="Mapa de Emergencias" x:Name="btnEmergencyMap" Clicked="btnEmergencyMap_ClickedAsync" Style="{StaticResource btnHome}"></Button>
+            <Button Text="Estaciones" x:Name="btnStations" Clicked="btnStations_ClickedAsync" Style="{StaticResource btnHome}"></Button>
+            <Button Text="Nosotros" x:Name="btnInfo" Clicked="btnInfo_ClickedAsync" Style="{StaticResource btnHome}"></Button>
             
         </StackLayout>
     </ContentPage.Content>

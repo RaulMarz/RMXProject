@@ -21,7 +21,7 @@ namespace FEMES.Views.Stations
         }
         private async Task btnDetail_ClickedAsync(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Views.Stations.StationsDetailPage());
+            await Navigation.PushAsync(new Views.Stations.StationsDetailPage());
         }
     }
 }

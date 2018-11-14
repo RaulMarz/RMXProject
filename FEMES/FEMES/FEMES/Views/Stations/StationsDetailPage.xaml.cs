@@ -12,9 +12,11 @@ namespace FEMES.Views.Stations
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class StationsDetailPage : ContentPage
 	{
-		public StationsDetailPage ()
-		{
+		public StationsDetailPage (string ID = "0")
+        {
 			InitializeComponent ();
-		}
+
+            contentPageStationDetail.Title = "Estación No. " + ID;
+        }
 	}
 }

@@ -19,22 +19,22 @@ namespace FEMES.Views
 
         private async Task btnEmergency_ClickedAsync(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Views.Emergency.EmergencyPage());
+            await Navigation.PushAsync(new Views.Emergency.EmergencyPage());
         }
 
         private async Task btnEmergencyMap_ClickedAsync(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Views.Emergency.EmergencyMapPage());
+            await Navigation.PushAsync(new Views.Emergency.EmergencyMapPage());
         }
 
         private async Task btnStations_ClickedAsync(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Views.Stations.StationsPage());
+            await Navigation.PushAsync(new Views.Stations.StationsPage());
         }
 
         private async Task btnInfo_ClickedAsync(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Views.Info.InfoPage());
+            await Navigation.PushAsync(new Views.Info.InfoPage());
         }
     }
 }

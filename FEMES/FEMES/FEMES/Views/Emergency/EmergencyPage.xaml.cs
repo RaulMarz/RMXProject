@@ -24,15 +24,15 @@ namespace FEMES.Views.Emergency
 
         private async Task btnDetail_ClickedAsync(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new Views.Emergency.EmergencyDetailPage());
+            await Navigation.PushAsync(new Views.Emergency.EmergencyDetailPage());
         }
 
         private async Task lstEmergency_ItemSelectedAsync(object sender, SelectedItemChangedEventArgs e)
         {
-            var item = (Data.Entities.Emergency)e.SelectedItem;
             //await DisplayAlert("ItemSelected", item.Description, "Ok");
 
-            await Navigation.PushModalAsync(new Views.Emergency.EmergencyDetailPage(item.ID.ToString()));
+            var item = (Data.Entities.Emergency)e.SelectedItem;
+            await Navigation.PushAsync(new Views.Emergency.EmergencyDetailPage(item.ID.ToString()));
 
         }
     }

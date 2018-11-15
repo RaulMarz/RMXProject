@@ -5,12 +5,17 @@
              Title="Perfil">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Perfil"
-                HorizontalOptions="CenterAndExpand" />
 
+            <Label Text="Nombre"></Label>
             <Entry x:Name="txtName" Text="" Keyboard="Default"/>
+            <Label Text="Genero"></Label>
             <Entry x:Name="txtGender" Text="" Keyboard="Default"/>
+            <Label Text="RH"></Label>
             <Entry x:Name="txtRH" Text="" Keyboard="Default"/>
+            
+            <!--<Entry x:Name="txtName" Text="" Keyboard="Default"/>
+            <Entry x:Name="txtGender" Text="" Keyboard="Default"/>
+            <Entry x:Name="txtRH" Text="" Keyboard="Default"/>-->
 
             <Button Text="Actualizar" Clicked="btnUpdateUserInfo_ClickedAsync"></Button>
 

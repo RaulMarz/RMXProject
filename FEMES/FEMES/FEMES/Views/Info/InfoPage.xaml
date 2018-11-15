@@ -5,9 +5,14 @@
              Title="Información General">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Info Page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            
+            
+            
+
+            <Image Source="CBVB.png" Aspect="AspectFill" HeightRequest="150" WidthRequest="150" HorizontalOptions="Center" Margin="0,10,0,10"></Image>
+
+            <Label Text="El Cuerpo de Bomberos Voluntarios de Bogotá D.C., Tiene como Misión, la gestión integral del riesgo contra incendios, los preparativos y atención de rescates en todas sus modalidades y la atención de incidentes con materiales peligrosos en la ciudad de Bogotá y en cualquier parte del mundo que lo requiera." Margin="5,0,5,0"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

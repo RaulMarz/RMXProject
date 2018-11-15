@@ -17,6 +17,16 @@ namespace FEMES.Views.Stations
 			InitializeComponent ();
 
             contentPageStationDetail.Title = "Estación No. " + ID;
+
+            if (ID != "0")
+            {
+                var Repository = new Data.Repositories.StationRepository();
+                var station = Repository.GetEntityByIDAsync(Int32.Parse(ID)).Result;
+
+                lblDescription.Text = "Descripción: " + station.Description;
+                lblPhone.Text = "Teléfono: " + station.Phone;
+            }
+
         }
 	}
 }

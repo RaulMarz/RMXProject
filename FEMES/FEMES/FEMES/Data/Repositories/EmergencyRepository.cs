@@ -27,6 +27,8 @@ namespace FEMES.Data.Repositories
                 Type = "Médico",
                 LogoSource="ambulance.png",
                 Description = "Trauma por accidente vehicular",
+                Date = "2018/11/10",
+                Hour = "22:05",
                 Lat = "1",
                 Lng = "1"
             };
@@ -37,6 +39,8 @@ namespace FEMES.Data.Repositories
                 Type = "Incendio",
                 Description = "Incendio forestal",
                 LogoSource = "fire.png",
+                Date = "2018/08/10",
+                Hour = "22:05",
                 Lat = "2",
                 Lng = "2"
             };
@@ -46,6 +50,8 @@ namespace FEMES.Data.Repositories
                 Type = "Rescate",
                 Description = "Persona atrapada",
                 LogoSource = "ax.png",
+                Date = "2018/11/10",
+                Hour = "22:05",
                 Lat = "3",
                 Lng = "3"
             };
@@ -55,6 +61,8 @@ namespace FEMES.Data.Repositories
                 Type = "Administrativo",
                 Description = "Presencia en concierto",
                 LogoSource = "form.png",
+                Date = "2018/05/03",
+                Hour = "22:05",
                 Lat = "4",
                 Lng = "4"
             };
@@ -65,8 +73,22 @@ namespace FEMES.Data.Repositories
                 Type = "Sustancias",
                 Description = "Fuga de gas",
                 LogoSource = "Chemical.png",
+                Date = "2018/02/28",
+                Hour = "22:05",
                 Lat = "5",
                 Lng = "5"
+            };
+
+            var emergency6 = new Data.Entities.Emergency
+            {
+                ID = 6,
+                Type = "Incendio",
+                Description = "Incendio en Habitación",
+                LogoSource = "fire.png",
+                Date = "2018/11/10",
+                Hour = "22:05",
+                Lat = "2",
+                Lng = "2"
             };
 
             CreateEmergencyAsync(emergency1);
@@ -74,6 +96,7 @@ namespace FEMES.Data.Repositories
             CreateEmergencyAsync(emergency3);
             CreateEmergencyAsync(emergency4);
             CreateEmergencyAsync(emergency5);
+            CreateEmergencyAsync(emergency6);
 
         }
 
@@ -90,6 +113,11 @@ namespace FEMES.Data.Repositories
         public Task<int> UpdateEmergencyAsync(Entities.Emergency Emergency)
         {
             return Database.UpdateAsync(Emergency);
+        }
+
+        public Task<Entities.Emergency> GetEntityByIDAsync(int id)
+        {
+            return Database.Table<Entities.Emergency>().Where(e => e.ID == id).FirstOrDefaultAsync();
         }
     }
 }

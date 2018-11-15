@@ -18,10 +18,18 @@ namespace FEMES.Views.Stations
 
             var Repository = new Data.Repositories.StationRepository();
             var stations = Repository.GetStationAsync().Result;
+            lstStations.ItemsSource = stations;
         }
         private async Task btnDetail_ClickedAsync(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Views.Stations.StationsDetailPage());
+        }
+
+        private async Task lstStations_ItemSelectedAsync(object sender, SelectedItemChangedEventArgs e)
+        {
+            var item = (Data.Entities.Station)e.SelectedItem;
+            await Navigation.PushAsync(new Views.Stations.StationsDetailPage(item.ID.ToString()));
+
         }
     }
 }

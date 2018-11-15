@@ -17,16 +17,14 @@
                             <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
                                 <Image Source="{Binding LogoSource}" HeightRequest="30" WidthRequest="50" HorizontalOptions="Start"></Image>
                                 <StackLayout Orientation="Vertical">
-                                    <Label Text="{Binding Description}" Font="18"></Label>
-                                    <Label Text="{Binding Type}" TextColor="Gray"></Label>
+                                    <Label Text="{Binding Description}" Font="15"></Label>
+                                    <Label Text="{Binding Type}" TextColor="Gray" Margin="0,-3,0,0"></Label>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
-            <Button Text="Detalle" x:Name="btnDetail" Clicked="btnDetail_ClickedAsync" HorizontalOptions="CenterAndExpand"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

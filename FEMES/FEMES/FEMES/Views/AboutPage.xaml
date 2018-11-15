@@ -5,8 +5,12 @@
              Title="Acerca de">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Acerca de"
-                VerticalOptions="CenterAndExpand" 
+
+            <Label Text="Aplicación desarrollada con fines educativos para la asignatura Computación Movil de la Universidad Manuela Beltrán.  " Margin="5,0,5,0"
+                HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+
+            <Label Text="2018"
+                   
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>

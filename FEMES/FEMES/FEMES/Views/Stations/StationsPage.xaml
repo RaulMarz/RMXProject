@@ -8,7 +8,22 @@
             <Label Text="Estaciones"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Button Text="Detalle" x:Name="btnDetail" Clicked="btnDetail_ClickedAsync" HorizontalOptions="CenterAndExpand"></Button>
+            
+            <ListView x:Name="lstStations" SelectionMode="Single" ItemSelected="lstStations_ItemSelectedAsync">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                                <Image Source="fireStation.png" HeightRequest="30" WidthRequest="50" HorizontalOptions="Start"></Image>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Description}" Font="15"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -23,9 +23,9 @@ namespace FEMES.Data.Repositories
             {
                 ID = 1,
                 Name = "1",
-                Description = "1",
+                Description = "EB - Central",
                 Address = "1",
-                Phone = "1",
+                Phone = "2739293",
                 Lat = "1",
                 Lng = "1"
             };
@@ -34,9 +34,9 @@ namespace FEMES.Data.Repositories
             {
                 ID = 2,
                 Name = "2",
-                Description = "2",
+                Description = "EB - Chapinero",
                 Address = "2",
-                Phone = "2",
+                Phone = "2839475",
                 Lat = "2",
                 Lng = "2"
             };
@@ -45,17 +45,29 @@ namespace FEMES.Data.Repositories
             {
                 ID = 3,
                 Name = "3",
-                Description = "3",
+                Description = "EB - Restrepo",
                 Address = "3",
-                Phone = "3",
+                Phone = "8938495",
                 Lat = "3",
                 Lng = "3"
+            };
+
+            var Station4 = new Data.Entities.Station
+            {
+                ID = 4,
+                Name = "4",
+                Description = "EB - Las Ferias",
+                Address = "4",
+                Phone = "1267384",
+                Lat = "4",
+                Lng = "4"
             };
 
             CreateStationAsync(Station1);
             CreateStationAsync(Station2);
             CreateStationAsync(Station3);
-            
+            CreateStationAsync(Station4);
+
 
         }
 
@@ -72,6 +84,10 @@ namespace FEMES.Data.Repositories
         public Task<int> UpdateStationAsync(Entities.Station Station)
         {
             return Database.UpdateAsync(Station);
+        }
+        public Task<Entities.Station> GetEntityByIDAsync(int id)
+        {
+            return Database.Table<Entities.Station>().Where(e => e.ID == id).FirstOrDefaultAsync();
         }
     }
 }

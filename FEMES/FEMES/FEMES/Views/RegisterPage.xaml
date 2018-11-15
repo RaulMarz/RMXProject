@@ -11,8 +11,11 @@
             <Entry x:Name="txtGender" Placeholder="Género" Keyboard="Default"/>
             <Entry x:Name="txtRH" Placeholder="RH" Keyboard="Default"/>-->
 
-            <Entry x:Name="txtName" Text="Nombre" Keyboard="Default"/>
+            <Label Text="Nombre"></Label>
+            <Entry x:Name="txtName" Text="José Sanabria" Keyboard="Default"/>
+            <Label Text="Genero"></Label>
             <Entry x:Name="txtGender" Text="Masculino" Keyboard="Default"/>
+            <Label Text="RH"></Label>
             <Entry x:Name="txtRH" Text="O+" Keyboard="Default"/>
 
             <Button Text="Guardar" Clicked="btnSaveUserInfo_ClickedAsync"></Button>
